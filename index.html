@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Atlântica</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="image/x-icon" href="./src/img/Logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        /* Estilos para o modal da introdução */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .modal-content h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+
+
+        /* Media query para celular */
+        @media (max-width: 768px) {
+            .desktop-content {
+                display: none;
+            }
+
+            .modal {
+                display: flex;
+            }
+        }
+
+        /* Estilo normal para desktop */
+        @media (min-width: 540px) {
+            .modal {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-cover bg-no-repeat bg-center">
+    <div class="content">
+        <header>
+            <nav class="p-4 shadow-lg bg-green-900 bg-opacity-80 backdrop-blur-md">
+                <div class="container mx-auto flex justify-center items-center">
+                    <div class="text-white text-2xl font-bold flex items-center">
+                        <a href="#" class="hover:text-green-200 flex items-center">
+                            <img src="./src/img/leaves.png" alt="Logo MataEmPauta" class="mr-2 h-10 w-10">
+                            MataEmPauta
+                        </a>
+                    </div>
+        </header>
+
+        <!-- Modal da Introdução para celular -->
+        <div id="intro-modal" class="modal">
+            <div class="modal-content">
+                <h1>Bem-vindo à Mata Atlântica</h1>
+                <p>Descubra a importância da conservação e da gestão ambiental para proteger este bioma único.</p>
+                <button class="close-btn" id="close-modal">X</button>
+            </div>
+        </div>
+
+        <!-- Seção Hero (Aparece apenas no desktop) -->
+        <section class="hero min-h-[60vh] flex items-center justify-center text-center desktop-content">
+            <div class="hero-content text-white bg-black bg-opacity-50 p-6 rounded-lg max-w-3xl">
+                <h1 class="text-3xl md:text-5xl mb-4">Bem-vindo à Mata Atlântica</h1>
+                <p class="text-lg md:text-xl mb-2">Descubra a importância da conservação e da gestão ambiental para
+                    proteger este bioma único.</p>
+                <p>Clique em um dos cards para saber mais</p>
+            </div>
+        </section>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a href="./políticas.html">
+                        <h3 class="text-2xl text-white mb-4">Políticas Públicas</h3>
+                        <p class="text-base text-green-200">Entenda as políticas públicas que impactam diretamente a
+                            Mata
+                            Atlântica e as ações de conservação.</p>
+                        <hr class="my-4">
+                        <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                            página
+                            de políticas ou arraste para o lado para ver outra opção</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="text-2xl text-white mb-4">Gestão Ambiental</h3>
+                    <p class="text-base text-green-200">Conheça as práticas e processos envolvidos na gestão sustentável
+                        deste bioma.</p>
+                    <hr class="my-4">
+                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                        página
+                        de políticas ou arraste para o lado para ver outra opção</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3 class="text-2xl text-white mb-4">Legislação</h3>
+                    <p class="text-base text-green-200">Descubra as leis e regulamentações que visam proteger a Mata
+                        Atlântica e seus ecossistemas.</p>
+                    <hr class="my-4">
+                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                        página
+                        de políticas ou arraste para o lado para ver outra opção</p>
+                </div>
+                <div class="swiper-slide">
+                    <h3 class="text-2xl text-white mb-4">Conservação</h3>
+                    <p class="text-base text-green-200">Explore as iniciativas de conservação e como podemos preservar a
+                        biodiversidade.</p>
+                    <hr>
+                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                        página
+                        de políticas ou arraste para o lado para ver outra opção</p>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
+
+        </div>
+
+        <!-- Cards para a versão desktop -->
+        <div class="desktop-cards-container">
+            <a href="./políticas.html">
+                <div class="card">
+                    <h3>Políticas Públicas</h3>
+                    <p>Entenda as políticas públicas que impactam diretamente a Mata Atlântica.</p>
+                    <hr class="my-4">
+                    <p>Clique para saber mais.</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Gestão Ambiental</h3>
+            <p>Conheça as práticas e processos envolvidos na gestão sustentável deste bioma.</p>
+            <hr class="my-4">
+            <p>Clique para saber mais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Legislação</h3>
+            <p>Descubra as leis e regulamentações que visam proteger a Mata Atlântica.</p>
+            <hr class="my-4">
+            <p>Clique para saber mais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Conservação</h3>
+            <p>Explore as iniciativas de conservação e como preservar a biodiversidade.</p>
+            <hr class="my-4">
+            <p>Clique para saber mais.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-green-900 p-6 text-center text-green-200">
+        <div class="container mx-auto">
+            <p>&copy; Todos os direitos reservados ao grupo mataempauta da turma 1°log(D) do Centro Estadual de
+                Educação
+                Profissional em Logística e Transporte Luiz Pinto de Carvalho e ao criador do site Angel Silva
+                de
+                Santana</p>
+            <p>Contato: angelsilvadesantana@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="./JS/modal.js"></script>
+    <script src="./JS/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
