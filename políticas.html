@@ -183,6 +183,36 @@
             text-align: center;
             bottom: 0;
         }
+
+        @media (max-width: 305px) {
+
+            nav {
+                width: 300px
+            }
+
+            footer {
+                width: 330px;
+            }
+
+            .main-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 60vh;
+                width: 300px;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                text-align: center;
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                margin: 50px;
+                margin-left: 100px;
+            }
+        }
     </style>
 </head>
 
@@ -245,8 +275,9 @@
 
         <!-- Botões de navegação -->
         <div class="buttons-container">
-            <button class="btn" onclick="goBack()">Voltar</button>
-            <button class="btn" onclick="goNext()">Próximo</button>
+            <button class="btn"><a href="./index.html">Home</a></button>
+            <button class="btn"><a href="./gestão.html  ">Gestão</a>
+            </button>
         </div>
 
         <!-- Rodapé -->
@@ -261,16 +292,7 @@
         </footer>
 
         <script src="./JS/overlay.js"></script>
-        <script>
-            function goBack() {
-                window.history.back();
-            }
 
-            function goNext() {
-                // Lógica para navegação
-                window.alert('Navegar para a próxima página.');
-            }
-        </script>
 </body>
 
 </html>
