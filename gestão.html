@@ -1,14 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestão Ambiental - Mata Atlântica</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="icon" type="image/x-icon" href="./src/img/Logo.png">
+    <style>
+        body {
+            background-image: url("./src/img/mata.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(16, 70, 43, 0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            text-align: center;
+        }
+
+        nav a {
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d1e7dd;
+        }
+
+        /* Main Section */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .management-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        .management-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .management-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .management-item p {
+            font-size: 1rem;
+            color: #b0c4b1;
+        }
+
+        footer {
+            background: #10462b;
+            padding: 20px;
+            text-align: center;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #b0c4b1;
+        }
+
+        /* Botões */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: rgba(16, 70, 43, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(16, 70, 43, 1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                background-image: url("./src/img/98bbb752c743f7640f52a54ce6814fd6.jpg");
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .management-item {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .overlay-content {
+            background: rgba(16, 70, 43, 0.925);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 90%;
+        }
+
+        .overlay img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .overlay p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .overlay .close {
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-cover bg-no-repeat bg-center">
+    <div class="content">
+        <header>
+            <nav class="p-4 shadow-lg bg-green-900 bg-opacity-80 backdrop-blur-md">
+                <div class="container mx-auto flex justify-center items-center">
+                    <div class="text-white text-2xl font-bold flex items-center">
+                        <a href="#" class="hover:text-green-200 flex items-center">
+                            <img src="./src/img/leaves.png" alt="Logo MataEmPauta" class="mr-2 h-10 w-10">
+                            MataEmPauta
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="management-section">
+                <h1>Gestão Ambiental da Mata Atlântica</h1>
+                <p>Clique nos cards para saber mais sobre os esforços de gestão ambiental</p>
 
+                <div class="management-item" onclick="showDescription('gestao1')">
+                    <h2>Gestão de Recursos Hídricos</h2>
+                    <p>A gestão dos recursos hídricos na Mata Atlântica é fundamental para garantir o abastecimento de
+                        água e a preservação dos rios e bacias hidrográficas da região.</p>
+                </div>
+
+                <div class="management-item" onclick="showDescription('gestao2')">
+                    <h2>Gestão de Resíduos e Saneamento</h2>
+                    <p>Promover um sistema eficiente de gestão de resíduos é essencial para minimizar os impactos
+                        ambientais e preservar a biodiversidade da Mata Atlântica.</p>
+                </div>
+
+                <div class="management-item" onclick="showDescription('gestao3')">
+                    <h2>Monitoramento da Biodiversidade</h2>
+                    <p>O monitoramento contínuo da biodiversidade garante a preservação das espécies e o equilíbrio dos
+                        ecossistemas na Mata Atlântica.</p>
+                </div>
+
+                <div class="management-item" onclick="showDescription('gestao4')">
+                    <h2>Educação Ambiental</h2>
+                    <p>A educação ambiental é um componente vital na gestão da Mata Atlântica, conscientizando as
+                        comunidades sobre a importância da conservação.</p>
+                </div>
+            </div>
+
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <img id="overlay-icon" src="" alt="">
+                    <p id="overlay-description"></p>
+                    <span class="close" onclick="closeOverlay()">Fechar</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Botões de navegação -->
+        <div class="buttons-container">
+            <button class="btn"><a href="./políticas.html">Políticas</a></button>
+            <button class="btn">Legislação</button>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="bg-green-900 p-6 text-center text-green-200">
+            <div class="container mx-auto">
+                <p>&copy; Todos os direitos reservados ao grupo MataEmPauta da turma 1°log(D) do Centro Estadual
+                    de
+                    Educação Profissional em Logística e Transporte Luiz Pinto de Carvalho e ao criador do site Angel
+                    Silva de Santana</p>
+                <p>Contato: angelsilvadesantana@gmail.com</p>
+            </div>
+        </footer>
+
+        <script src="./JS/overlay.js"></script>
+
+    </div>
 </body>
 
 </html>

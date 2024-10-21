@@ -46,8 +46,8 @@
 
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 1px;
+            right: 1px;
             background-color: red;
             color: white;
             border: none;
@@ -61,7 +61,7 @@
 
 
         /* Media query para celular */
-        @media (max-width: 768px) {
+        @media (max-width: 430px) {
             .desktop-content {
                 display: none;
             }
@@ -72,9 +72,37 @@
         }
 
         /* Estilo normal para desktop */
-        @media (min-width: 540px) {
+        @media (min-width: 370px) {
             .modal {
                 display: none;
+            }
+        }
+
+        /* Media query para celular */
+        @media (max-width: 375px) {
+
+
+
+            footer {
+                display: flex;
+                width: 380px;
+                font-size: larger;
+            }
+
+            nav {
+                display: fixed;
+                width: 380px;
+            }
+
+            .modal {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 265px) {
+            body {
+                background-color: rgba(16, 70, 43, 255);
+                background-size: cover;
             }
         }
     </style>
@@ -96,7 +124,7 @@
         <!-- Modal da Introdução para celular -->
         <div id="intro-modal" class="modal">
             <div class="modal-content">
-                <h1>Bem-vindo à Mata Atlântica</h1>
+                <h1>Bem-vindo Ao Site MataEmPauta</h1>
                 <p>Descubra a importância da conservação e da gestão ambiental para proteger este bioma único.</p>
                 <button class="close-btn" id="close-modal">X</button>
             </div>
@@ -129,73 +157,77 @@
                             de políticas ou arraste para o lado para ver outra opção</p>
                     </a>
                 </div>
-
-                <div class="swiper-slide">
-                    <h3 class="text-2xl text-white mb-4">Gestão Ambiental</h3>
-                    <p class="text-base text-green-200">Conheça as práticas e processos envolvidos na gestão sustentável
-                        deste bioma.</p>
-                    <hr class="my-4">
-                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
-                        página
-                        de políticas ou arraste para o lado para ver outra opção</p>
-                </div>
-                <div class="swiper-slide">
-                    <h3 class="text-2xl text-white mb-4">Legislação</h3>
-                    <p class="text-base text-green-200">Descubra as leis e regulamentações que visam proteger a Mata
-                        Atlântica e seus ecossistemas.</p>
-                    <hr class="my-4">
-                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
-                        página
-                        de políticas ou arraste para o lado para ver outra opção</p>
-                </div>
-                <div class="swiper-slide">
-                    <h3 class="text-2xl text-white mb-4">Conservação</h3>
-                    <p class="text-base text-green-200">Explore as iniciativas de conservação e como podemos preservar a
-                        biodiversidade.</p>
-                    <hr>
-                    <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
-                        página
-                        de políticas ou arraste para o lado para ver outra opção</p>
-                </div>
+                <a href="./gestão.html">
+                    <div class="swiper-slide">
+                        <h3 class="text-2xl text-white mb-4">Gestão Ambiental</h3>
+                        <p class="text-base text-green-200">Conheça as práticas e processos envolvidos na gestão
+                            sustentável
+                            deste bioma.</p>
+                        <hr class="my-4">
+                        <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                            página
+                            de políticas ou arraste para o lado para ver outra opção</p>
+                </a>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-
-
+            <div class="swiper-slide">
+                <h3 class="text-2xl text-white mb-4">Legislação</h3>
+                <p class="text-base text-green-200">Descubra as leis e regulamentações que visam proteger a Mata
+                    Atlântica e seus ecossistemas.</p>
+                <hr class="my-4">
+                <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                    página
+                    de políticas ou arraste para o lado para ver outra opção</p>
+            </div>
+            <div class="swiper-slide">
+                <h3 class="text-2xl text-white mb-4">Conservação</h3>
+                <p class="text-base text-green-200">Explore as iniciativas de conservação e como podemos preservar a
+                    biodiversidade.</p>
+                <hr>
+                <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                    página
+                    de políticas ou arraste para o lado para ver outra opção</p>
+            </div>
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-        <!-- Cards para a versão desktop -->
-        <div class="desktop-cards-container">
-            <a href="./políticas.html">
-                <div class="card">
-                    <h3>Políticas Públicas</h3>
-                    <p>Entenda as políticas públicas que impactam diretamente a Mata Atlântica.</p>
-                    <hr class="my-4">
-                    <p>Clique para saber mais.</p>
-            </a>
-        </div>
 
-        <div class="card">
+
+    </div>
+
+    <!-- Cards para a versão desktop -->
+    <div class="desktop-cards-container">
+        <a href="./políticas.html">
+            <div class="card">
+                <h3>Políticas Públicas</h3>
+                <p>Entenda as políticas públicas que impactam diretamente a Mata Atlântica.</p>
+                <hr class="my-4">
+                <p>Clique para saber mais.</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="./gestão.html">
             <h3>Gestão Ambiental</h3>
             <p>Conheça as práticas e processos envolvidos na gestão sustentável deste bioma.</p>
             <hr class="my-4">
             <p>Clique para saber mais.</p>
-        </div>
+        </a>
+    </div>
 
-        <div class="card">
-            <h3>Legislação</h3>
-            <p>Descubra as leis e regulamentações que visam proteger a Mata Atlântica.</p>
-            <hr class="my-4">
-            <p>Clique para saber mais.</p>
-        </div>
+    <div class="card">
+        <h3>Legislação</h3>
+        <p>Descubra as leis e regulamentações que visam proteger a Mata Atlântica.</p>
+        <hr class="my-4">
+        <p>Clique para saber mais.</p>
+    </div>
 
-        <div class="card">
-            <h3>Conservação</h3>
-            <p>Explore as iniciativas de conservação e como preservar a biodiversidade.</p>
-            <hr class="my-4">
-            <p>Clique para saber mais.</p>
-        </div>
+    <div class="card">
+        <h3>Conservação</h3>
+        <p>Explore as iniciativas de conservação e como preservar a biodiversidade.</p>
+        <hr class="my-4">
+        <p>Clique para saber mais.</p>
+    </div>
     </div>
 
     <!-- Rodapé -->

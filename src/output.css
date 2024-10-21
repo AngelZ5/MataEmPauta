@@ -903,6 +903,7 @@ nav a:hover {
 }
 
 /* Footer Styling */
+
 footer {
   background: #10462b;
   padding: 20px 0;
@@ -1015,7 +1016,7 @@ footer p {
 
   .swiper {
     display: block;
-    margin: 50px;
+    margin: 70px;
     height: 500px;
     width: 375px; /* Adjusted width for mobile */
   }
@@ -1040,8 +1041,8 @@ footer p {
     max-width: 300px;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 15px;
-    margin-left: 39.5px; /* Alignment fix for mobile */
+    margin: 0 9px;
+    margin-left: 40.5px; /* Alignment fix for mobile */
   }
 
   .swiper-wrapper {
@@ -1072,4 +1073,10 @@ footer {
   margin-top: 150px;
   text-align: center;
   bottom: 0;
+}
+
+@media (max-width: 440px) {
+  body {
+    background-image: url("./img/photo-1503435980610-a51f3ddfee50.jpeg");
+  }
 }
