@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./src/img/Logo.png">
     <style>
         body {
-            background-image: url("./src/img/mata.jpeg");
+            background-image: url("./src/img/GestãoBgDesktop.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
@@ -113,6 +113,7 @@
             cursor: pointer;
             border: none;
             transition: background 0.3s ease;
+            margin-top: 50px;
         }
 
         .btn:hover {
@@ -122,7 +123,7 @@
         /* Responsividade */
         @media (max-width: 768px) {
             body {
-                background-image: url("./src/img/98bbb752c743f7640f52a54ce6814fd6.jpg");
+                background-image: url("./src/img/gestãoBG.jpeg");
             }
 
             h1 {
@@ -199,25 +200,25 @@
                 <h1>Gestão Ambiental da Mata Atlântica</h1>
                 <p>Clique nos cards para saber mais sobre os esforços de gestão ambiental</p>
 
-                <div class="management-item" onclick="showDescription('gestao1')">
+                <div class="management-item" onclick="showDescriptionGestao('gestao1')">
                     <h2>Gestão de Recursos Hídricos</h2>
                     <p>A gestão dos recursos hídricos na Mata Atlântica é fundamental para garantir o abastecimento de
                         água e a preservação dos rios e bacias hidrográficas da região.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao2')">
+                <div class="management-item" onclick="showDescriptionGestao('gestao2')">
                     <h2>Gestão de Resíduos e Saneamento</h2>
                     <p>Promover um sistema eficiente de gestão de resíduos é essencial para minimizar os impactos
                         ambientais e preservar a biodiversidade da Mata Atlântica.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao3')">
+                <div class="management-item" onclick="showDescriptionGestao('gestao3')">
                     <h2>Monitoramento da Biodiversidade</h2>
                     <p>O monitoramento contínuo da biodiversidade garante a preservação das espécies e o equilíbrio dos
                         ecossistemas na Mata Atlântica.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao4')">
+                <div class="management-item" onclick="showDescriptionGestao('gestao4')">
                     <h2>Educação Ambiental</h2>
                     <p>A educação ambiental é um componente vital na gestão da Mata Atlântica, conscientizando as
                         comunidades sobre a importância da conservação.</p>
@@ -226,7 +227,6 @@
 
             <div id="overlay" class="overlay">
                 <div class="overlay-content">
-                    <img id="overlay-icon" src="" alt="">
                     <p id="overlay-description"></p>
                     <span class="close" onclick="closeOverlay()">Fechar</span>
                 </div>
@@ -251,6 +251,8 @@
         </footer>
 
         <script src="./JS/overlay.js"></script>
+
+
 
     </div>
 </body>
