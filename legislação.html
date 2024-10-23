@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão Ambiental - Mata Atlântica</title>
+    <title>Legislação Ambiental - Mata Atlântica</title>
     <link rel="stylesheet" href="./src/output.css">
     <link rel="icon" type="image/x-icon" href="./src/img/Logo.png">
     <style>
         body {
-            background-image: url("./src/img/GestãoBgDesktop.jpg");
+            background-image: url("./src/img/legislaçãoDesktopBg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
@@ -40,8 +40,9 @@
             justify-content: center;
             min-height: 60vh;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3);
             text-align: center;
+            border-radius: 1px;
         }
 
         h1 {
@@ -123,7 +124,7 @@
         /* Responsividade */
         @media (max-width: 768px) {
             body {
-                background-image: url("./src/img/gestãoBG.jpeg");
+                background-image: url("./src/img/BgMobileLegislação.jpg ");
             }
 
             h1 {
@@ -197,31 +198,32 @@
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <div class="management-section">
-                <h1>Gestão Ambiental da Mata Atlântica</h1>
-                <p>Clique nos cards para saber mais sobre os esforços de gestão ambiental</p>
+                <h1>Legislação Ambiental da Mata Atlântica</h1>
+                <p>Clique nos cards para saber mais sobre as principais legislações e políticas voltadas para a proteção
+                    da Mata Atlântica</p>
 
-                <div class="management-item" onclick="showDescription('gestao1')">
-                    <h2>Gestão de Recursos Hídricos</h2>
-                    <p>A gestão dos recursos hídricos na Mata Atlântica é fundamental para garantir o abastecimento de
-                        água e a preservação dos rios e bacias hidrográficas da região.</p>
+                <div class="management-item" onclick="showDescription('legislacao1')">
+                    <h2>Lei da Mata Atlântica</h2>
+                    <p>A Lei nº 11.428/2006 estabelece diretrizes para a proteção e recuperação da vegetação nativa da
+                        Mata Atlântica, preservando seus ecossistemas.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao2')">
-                    <h2>Gestão de Resíduos e Saneamento</h2>
-                    <p>Promover um sistema eficiente de gestão de resíduos é essencial para minimizar os impactos
-                        ambientais e preservar a biodiversidade da Mata Atlântica.</p>
+                <div class="management-item" onclick="showDescription('legislacao2')">
+                    <h2>Política Nacional do Meio Ambiente</h2>
+                    <p>Instituída pela Lei nº 6.938/1981, visa a preservação, melhoria e recuperação da qualidade
+                        ambiental, incluindo a proteção da Mata Atlântica.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao3')">
-                    <h2>Monitoramento da Biodiversidade</h2>
-                    <p>O monitoramento contínuo da biodiversidade garante a preservação das espécies e o equilíbrio dos
-                        ecossistemas na Mata Atlântica.</p>
+                <div class="management-item" onclick="showDescription('legislacao3')">
+                    <h2>Sistema Nacional de Unidades de Conservação (SNUC)</h2>
+                    <p>A Lei nº 9.985/2000 cria o SNUC, que define regras para criação e gestão de áreas protegidas,
+                        incluindo parques e reservas na Mata Atlântica.</p>
                 </div>
 
-                <div class="management-item" onclick="showDescription('gestao4')">
-                    <h2>Educação Ambiental</h2>
-                    <p>A educação ambiental é um componente vital na gestão da Mata Atlântica, conscientizando as
-                        comunidades sobre a importância da conservação.</p>
+                <div class="management-item" onclick="showDescription('legislacao4')">
+                    <h2>Constituição Federal de 1988</h2>
+                    <p>O artigo 225 da Constituição estabelece o direito ao meio ambiente ecologicamente equilibrado e
+                        prevê a proteção da Mata Atlântica como patrimônio nacional.</p>
                 </div>
             </div>
 
@@ -235,8 +237,8 @@
 
         <!-- Botões de navegação -->
         <div class="buttons-container">
-            <a href="./políticas.html"><button class="btn">Políticas</button></a>
-            <a href="./legislação.html"><button class="btn">Legislação</button></a>
+            <a href="./gestão.html"> <button class="btn">Gestão</button></a>
+            <a href="./conservação.html"> <button class="btn">Conservação</button></a>
         </div>
 
         <!-- Rodapé -->
