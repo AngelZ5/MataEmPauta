@@ -1064,6 +1064,23 @@ footer p {
     font-size: 1.3rem;
     color: #b0c4b1;
   }
+
+  .donation-slide {
+    background: linear-gradient(900deg, rgba(0, 0, 0, 0.588), rgb(85, 255, 0));
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .donation-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .text-background {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+  }
 }
 
 /* Footer Responsiveness */

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações - Mata Atlântica</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="icon" type="image/x-icon" href="./src/img/Logo.png">
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #00796b;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+
+        .ong-card {
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+            color: white;
+        }
+
+        .ong-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .donate-button {
+            background-color: #009688;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.4s, transform 0.2s;
+        }
+
+        .donate-button:hover {
+            background-color: #005f57;
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.4s, transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #005f57;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .ong-zoe,
+        .ong-sos-mata-atlantica {
+            background-color: #00796b;
+        }
+
+        .ong-logo {
+            width: 60px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 440px) {
+            .ong-zoe {
+                background-image: url('./src/img/ongZoeLogo.png');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 30px;
+            }
+
+            .ong-sos-mata-atlantica {
+                background-image: url('./src/img/sosMataAtlanticaLogo.jpeg');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 30px;
+            }
+
+            .ong-description {
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px;
+                border-radius: 50px;
+            }
+
+            .ong-logo {
+                display: none;
+            }
+        }
+
+        /* Nova classe para centralizar o botão voltar */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            margin-top: 20px;
+            /* Espaço acima do botão */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Doar para ONGs Ambientais</h1>
+    </header>
+
+    <div class="container">
+        <h2>Escolha uma ONG para doar:</h2>
+
+        <div class="ong-card ong-zoe">
+            <img src="./src/img/ongZoeLogo.png" alt="Logo ONG ZOÉ" class="ong-logo">
+            <div class="ong-description">
+                <h3>ONG ZOÉ</h3>
+                <p>Defendemos a preservação da Amazônia e trabalhamos de forma independente, sem compromissos com
+                    agendas empresariais ou políticas. Acreditamos na inclusão de todas as vozes, priorizando a
+                    participação de minorias. Nossa atuação é sem fins lucrativos, focada exclusivamente na promoção de
+                    nossa missão.</p>
+                <a href="https://ongzoe.org/?form=doe"><button class="donate-button">Doar</button></a>
+            </div>
+        </div>
+
+        <div class="ong-card ong-sos-mata-atlantica">
+            <img src="./src/img/sosMataAtlanticaLogo.jpeg" alt="Logo SOS Mata Atlântica" class="ong-logo">
+            <div class="ong-description">
+                <h3>SOS Mata Atlântica</h3>
+                <p>Atua na promoção de políticas públicas para a conservação da Mata Atlântica por meio do monitoramento
+                    do bioma, produção de estudos, projetos demonstrativos, diálogo com setores públicos e privados,
+                    aprimoramento da legislação ambiental, comunicação e engajamento da sociedade.</p>
+                <a href="https://www.sosma.org.br/doacao"><button class="donate-button">Doar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Novo contêiner para centralizar o botão voltar -->
+    <div class="back-button-container">
+        <a href="./index.html"><button class="back-button">Voltar Para o início</button></a>
+    </div>
+
+    <footer>
+        <div class="container mx-auto">
+            <p>&copy; Todos os direitos reservados ao grupo MataEmPauta da turma 1°log(D) do Centro Estadual de Educação
+                Profissional em Logística e Transporte Luiz Pinto de Carvalho e ao criador do site Angel Silva de
+                Santana</p>
+            <p>Contato: angelsilvadesantana@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

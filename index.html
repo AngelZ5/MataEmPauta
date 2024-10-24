@@ -58,6 +58,34 @@
             cursor: pointer;
         }
 
+        .donation-button {
+            background-color: #195336;
+            box-shadow: 5px 5px 5px black;
+            color: white;
+            border-radius: 50px;
+            width: 130px;
+            height: 50px;
+            margin: 10px;
+            font-size: larger;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .donation-button:hover {
+            transform: scale(1.05);
+            background-color: #1c6f4a;
+
+        }
+
+
+
+        footer hr {
+            margin: 10px;
+        }
+
+
+
 
 
         /* Media query para celular */
@@ -190,9 +218,21 @@
                     página
                     de políticas ou arraste para o lado para ver outra opção</p>
             </div>
+
+            <div class="swiper-slide donation-slide">
+                <a href="./Doar.html">
+                    <div class="text-background">
+                        <h3 class="text-2xl text-white mb-4">Doação</h3>
+                        <p class="text-base text-green-200">Contribua para a conservação da Mata Atlântica.</p>
+                        <hr class="my-4">
+                        <p class="advice flex justify-center items-center text-sm text-gray-300">Clique para ir para a
+                            página de
+                            doações ou arraste para o lado para ver outra opção</p>
+                    </div>
+                </a>
+            </div>
+
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
 
 
@@ -228,16 +268,24 @@
     </div>
 
     <div class="card">
-        <h3>Conservação</h3>
-        <p>Explore as iniciativas de conservação e como preservar a biodiversidade.</p>
-        <hr class="my-4">
-        <p>Clique para saber mais.</p>
+        <a href="./conservação.html">
+            <h3>Conservação</h3>
+            <p>Explore as iniciativas de conservação e como preservar a biodiversidade.</p>
+            <hr class="my-4">
+            <p>Clique para saber mais.</p>
+        </a>
     </div>
     </div>
 
     <!-- Rodapé -->
     <footer class="bg-green-900 p-6 text-center text-green-200">
         <div class="container mx-auto">
+            <p>Este site foi criado para fins acadêmicos com o objetivo de arrecadar doações para ONGs ambientais. Sua
+                contribuição faz a diferença. Clique no botão abaixo para ver as ONGs participantes e escolher para qual
+                deseja doar.</p>
+            <a href="./Doar.html">
+                <button class="donation-button">Quero Doar!</button></a>
+            <hr>
             <p>&copy; Todos os direitos reservados ao grupo mataempauta da turma 1°log(D) do Centro Estadual de
                 Educação
                 Profissional em Logística e Transporte Luiz Pinto de Carvalho e ao criador do site Angel Silva

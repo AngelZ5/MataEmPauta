@@ -41,6 +41,22 @@ const descriptions = {
   legislacao4: {
     text: "A Constituição Federal de 1988 trouxe um importante avanço na proteção ambiental no Brasil. Ela dedica um capítulo específico ao meio ambiente, o Capítulo VI, que estabelece o direito de todos a um meio ambiente ecologicamente equilibrado, essencial para uma qualidade de vida saudável. O Artigo 225 define que é dever do poder público e da coletividade defendê-lo e preservá-lo para as futuras gerações. A Constituição também impõe ao governo a obrigação de implementar políticas que visem a preservação dos ecossistemas, combater a poluição, proteger a fauna e a flora e promover a educação ambiental. Ela ainda prevê sanções para atividades que causem degradação ao meio ambiente, reforçando a importância da sustentabilidade e do uso consciente dos recursos naturais.",
   },
+
+  conservacao1: {
+    text: "A proteção da fauna envolve medidas e políticas voltadas para a preservação e conservação das espécies animais em seu ambiente natural. Isso inclui a criação de áreas protegidas, como parques nacionais e reservas ecológicas, onde a biodiversidade é mantida e atividades humanas prejudiciais são controladas. A legislação também desempenha um papel crucial, impondo restrições à caça, pesca e captura de animais silvestres, além de promover a recuperação de espécies ameaçadas de extinção. A educação ambiental e o incentivo a práticas sustentáveis são essenciais para garantir que a fauna seja preservada para as futuras gerações.",
+  },
+
+  conservacao2: {
+    text: "O reflorestamento é a prática de restaurar áreas que sofreram desmatamento ou degradação ambiental, plantando novas árvores e outras espécies vegetais nativas. Esse processo é fundamental para a recuperação dos ecossistemas, pois ajuda a preservar a biodiversidade, melhora a qualidade do solo, regula o ciclo da água e captura o dióxido de carbono da atmosfera, contribuindo para o combate às mudanças climáticas. Além de restaurar habitats naturais para a fauna, o reflorestamento também pode trazer benefícios econômicos e sociais, como a geração de empregos em comunidades locais e a proteção de recursos naturais essenciais.",
+  },
+
+  conservacao3: {
+    text: "A preservação dos recursos naturais refere-se ao uso consciente e responsável dos elementos da natureza, como água, solo, ar, minerais, florestas e biodiversidade, de modo a garantir sua disponibilidade para as futuras gerações. Essa prática envolve a adoção de medidas sustentáveis que evitam o esgotamento ou degradação desses recursos, como a redução do consumo, o reaproveitamento de materiais, a reciclagem e o uso de energias renováveis. Além disso, políticas de conservação, como a criação de áreas protegidas e a promoção de agricultura e exploração de baixo impacto ambiental, são essenciais para manter o equilíbrio ecológico e prevenir danos irreversíveis ao meio ambiente. A conscientização pública e a educação ambiental desempenham um papel fundamental nesse processo, incentivando hábitos que minimizem a pegada ecológica e protejam os recursos naturais para as próximas gerações.",
+  },
+
+  conservacao4: {
+    text: "A educação para a sustentabilidade busca capacitar pessoas a adotarem práticas responsáveis em relação ao meio ambiente e aos recursos naturais. Ela promove o conhecimento sobre temas como mudanças climáticas, consumo consciente e energias renováveis, incentivando atitudes que protejam o planeta. O objetivo é formar uma sociedade mais consciente, que valorize a preservação dos ecossistemas e adote soluções sustentáveis para garantir o bem-estar das futuras gerações.",
+  },
 };
 
 function showDescription(description) {
